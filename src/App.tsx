@@ -1,5 +1,15 @@
+import { Button } from './components/Button'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
+
 export function App() {
   return (
-    <h1>Hello Word</h1>
+    <ThemeProvider theme={defaultTheme}>
+      <Button variant="secondary" />
+      <Button variant="default" />
+      <Button variant="primary" />
+      <GlobalStyle />
+    </ThemeProvider>
   )
 }
