@@ -21,33 +21,36 @@ export function History() {
             </tr>
           </thead>
           <tbody>
-            {cycles.map((cycle) => {
-              return (
-                <tr key={cycle.id}>
-                  <td>{cycle.task}</td>
-                  <td>{cycle.minutesAmount} minutos</td>
-                  <td>
-                    {formatDistanceToNow(cycle.startDate, {
-                      addSuffix: true,
-                      locale: ptBR,
-                    })}
-                  </td>
-                  <td>
-                    {cycle.finishedDate && (
-                      <StatusTask status_color="green">Concluída</StatusTask>
-                    )}
-                    {cycle.interruptedDate && (
-                      <StatusTask status_color="red">Interrompido</StatusTask>
-                    )}
-                    {!cycle.finishedDate && !cycle.interruptedDate && (
-                      <StatusTask status_color="yellow">
-                        Em andamento
-                      </StatusTask>
-                    )}
-                  </td>
-                </tr>
-              )
-            })}
+            {cycles
+              .slice()
+              .reverse()
+              .map((cycle) => {
+                return (
+                  <tr key={cycle.id}>
+                    <td>{cycle.task}</td>
+                    <td>{cycle.minutesAmount} minutos</td>
+                    <td>
+                      {formatDistanceToNow(new Date(cycle.startDate), {
+                        addSuffix: true,
+                        locale: ptBR,
+                      })}
+                    </td>
+                    <td>
+                      {cycle.finishedDate && (
+                        <StatusTask status_color="green">Concluída</StatusTask>
+                      )}
+                      {cycle.interruptedDate && (
+                        <StatusTask status_color="red">Interrompido</StatusTask>
+                      )}
+                      {!cycle.finishedDate && !cycle.interruptedDate && (
+                        <StatusTask status_color="yellow">
+                          Em andamento
+                        </StatusTask>
+                      )}
+                    </td>
+                  </tr>
+                )
+              })}
           </tbody>
         </table>
       </HistoryList>

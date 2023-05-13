@@ -25,4 +25,18 @@ input, textarea, button, body {
   font-size: 1rem; 
 }
 
+*::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: ${(props) => props.theme['green-500']};
+  border-radius: 999px;
+  border: 0;
+}
+
 `
