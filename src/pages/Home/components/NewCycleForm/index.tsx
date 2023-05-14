@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { CyclesContext } from '../../../../context/CyclesContext'
 
 export function NewCycleForm() {
-  const { activeCycle } = useContext(CyclesContext)
+  const { activeCycle, cycles } = useContext(CyclesContext)
   const { register } = useFormContext()
 
   return (
@@ -14,15 +14,15 @@ export function NewCycleForm() {
         list="task-suggestion"
         type="text"
         id="task"
-        placeholder="Dê um nome para o seu projeto"
+        placeholder="nome da tarefa"
         disabled={!!activeCycle}
         {...register('task')}
       />
 
       <datalist id="task-suggestion">
-        <option value="Projeto 01" />
-        <option value="Projeto 02" />
-        <option value="Projeto 03" />
+        {cycles.map((cycle) => {
+          return <option key={cycle.id} value={cycle.task} />
+        })}
       </datalist>
 
       <label htmlFor="minutesAmount">durante</label>

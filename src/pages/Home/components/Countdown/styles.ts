@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const CountdownContainer = styled.div`
   display: flex;
   gap: 1rem;
+  align-items: center;
 
   font-family: 'Roboto Mono', monospace;
   font-size: 10rem;
@@ -16,9 +17,9 @@ export const CountdownContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
-    line-height: 2rem;
-    gap: 0.4rem;
+    font-size: 2rem;
+    line-height: 1rem;
+    gap: 0.3rem;
   }
 `
 

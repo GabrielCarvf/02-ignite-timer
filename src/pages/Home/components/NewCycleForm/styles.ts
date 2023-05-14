@@ -43,9 +43,4 @@ export const TaskInput = styled(BaseInput)`
 
 export const MinutesCountdownInput = styled(BaseInput)`
   width: 4.5rem;
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
 `

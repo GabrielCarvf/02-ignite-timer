@@ -2,7 +2,8 @@ import { styled } from 'styled-components'
 
 export const HistoryContainer = styled.main`
   flex: 1;
-
+  margin-top: 1.5rem;
+  overflow: auto;
   display: flex;
   flex-direction: column;
 
@@ -14,11 +15,9 @@ export const HistoryContainer = styled.main`
 
 export const HistoryList = styled.div`
   flex: 1;
-  overflow-y: auto;
   margin-top: 2rem;
   flex-wrap: wrap;
-
-  max-height: 22rem;
+  max-height: 100%;
 
   table {
     width: 100%;
