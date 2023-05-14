@@ -67,4 +67,4 @@ Para visualizar o histórico de tarefas basta clicar no botão 📃 no canto sup
 
 Made by
 
-- [**Gabriel Carvalho**](https://github.com/GabrielCarvf) 🤘|  [LinkedIn](https://www.linkedin.com/in/gabriel-carvalho-5ba636182//in/annabeatriznf/)
+- [**Gabriel Carvalho**](https://github.com/GabrielCarvf) 🤘|  [LinkedIn](https://www.linkedin.com/in/gabriel-carvalho-5ba636182/)
